@@ -3,15 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="cssFile.css">
+    <title>Aris Tzimkas | Personal info</title>
 </head>
 <body>
-    <header></header>
-    
-    <nav></nav>
+    <nav class="navibar">
+        <ul class="sidebar">
+            <li onclick="hideBar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="white"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="personal_info.html">Personal info</a></li>
+            <li><a href="contact.html">Contact</a></li>
 
-    <main></main>
+        </ul>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="hideOnMobile"><a href="projects.html">Projects</a></li>
+            <li class="hideOnMobile"><a href="personal_info.html">Personal info</a></li>
+            <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+            <li class="menu-button" onclick="showBar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="white"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
 
-    <footer></footer>
+        </ul>
+    </nav>
+    <script>
+        function showBar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display="flex";
+        }
+        function hideBar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display="none";
+        }
+    </script>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
 </body>
 </html>
