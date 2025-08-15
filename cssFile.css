@@ -82,6 +82,25 @@ body{
 
 main{
     flex: 1;
+    background: linear-gradient(300deg,#000000,#151515,#000000);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+}
+
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.content{
     width: min(90%, 1000px);
     margin: 0 auto;
     display: flex;
@@ -91,7 +110,7 @@ main{
 
 .profile{
     display: flex;
-    background-color: rgba(192, 192, 192, 0.267);
+    background-color: rgba(192, 192, 192, 0.145);
     gap: 2rem;
     border-radius: 1rem;
     padding: 1.5rem;
@@ -125,10 +144,17 @@ main{
     font-weight: bold;
 }
 
-.profile-right{
+.profile-right h2{
     flex: 1;
+    color: rgba(255, 255, 255, 0.896);
+    font-family:consolas, monospace;
+    font-size: 2rem;
 }
-
+.profile-right p{
+    color: rgba(255, 255, 255, 0.696);
+    font-family:consolas, monospace;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+}
 footer{
     background-color: rgb(0, 0, 0);
 }
