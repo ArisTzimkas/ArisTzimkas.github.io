@@ -7,61 +7,59 @@ body{
     min-height: 100vh;
 }
 
-.navibar{
+.navibar, .sidebar{
     background-color: rgba(0, 0, 0, 0.897);
     backdrop-filter: blur(10px);
-
-    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
 }
 
 
-.navibar ul{
+.navibar ul, .sidebar{
     list-style: none;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
-.navibar li{
-    height: 100px;
+.navibar li, .sidebar li{
+    height: 70px;
 }
 
-.navibar li:first-child{
+.navibar li:first-child, .sidebar li:first-child{
     margin-right: auto;
 }
-
-.navibar a{
+.navibar a, .sidebar a{
     height: 100%;
     padding: 0 30px;
     text-decoration: none;
     display: flex;
     align-items: center;
     color: white;
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
+    font-family:consolas, monospace;
     font-size: x-large;
 }
 
-.navibar a:hover{
+.navibar a:hover, .sidebar a:hover{
     background-color: rgba(68, 68, 68, 0.637);
 }
 
-.navibar .sidebar{
+.sidebar {
     position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
     width: 250px;
     z-index: 999;
-    background-color: rgba(48, 48, 48, 0.466);
+    background-color: rgba(48, 48, 48, 0.4);
+    backdrop-filter: blur(10px); 
     box-shadow: -10px 0 10px rgba(0,0,0,0.1);
     display: none;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    backdrop-filter: blur(10px);
 }
 
-.navibar .sidebar li{
+
+.sidebar li{
     width: 100%;
 }
 
@@ -77,6 +75,54 @@ body{
         display: block;
     }
     
+}
+
+main{
+    width: min(90%, 1000px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile{
+    display: flex;
+    background-color: rgba(192, 192, 192, 0.267);
+    gap: 2rem;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+.profile-left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.avatar{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: rgb(43, 47, 87);
+    object-fit: cover;
+}
+.cv-button{
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    padding: 0.5rem 0;
+    background-color: #005fa3;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+
+.profile-right{
+    flex: 1;
 }
 
 
