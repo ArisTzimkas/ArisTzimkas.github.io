@@ -415,7 +415,7 @@ main{
 .row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem; 
+    gap: 6rem; 
     width: 100%;
     max-width: 1200px;
 }
@@ -427,12 +427,13 @@ main{
     .column h2{
         margin-top: 4rem;
     }
+    .row{
+        gap: 2rem;
+    }
 }
 .column h2{
     display: flex;
     align-items: center;
-    justify-content: center;
-
     gap: 1rem;
     margin-bottom: 4rem;
     font-size: clamp(1.5rem, 3vw, 2rem);
@@ -479,6 +480,7 @@ main{
     gap: 2rem;
     border-left: 5px solid #0400ff;
     padding-left: 1rem;
+    border-radius: 1rem;
 }
 
 .content-box::before{
