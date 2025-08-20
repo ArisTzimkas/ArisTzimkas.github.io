@@ -104,6 +104,8 @@ main{
     padding: 1.5rem;
     max-width: 1200px;
     margin: 6rem auto;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsl(0, 0%, 0%);
+
 }
 @media (max-width: 800px){
     .profile{
@@ -174,6 +176,8 @@ main{
 	position: relative;
     width: 100%;
     margin: 2rem auto;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsl(0, 0%, 0%);
+
 }
 
 .slider {
@@ -253,6 +257,8 @@ main{
     gap: 2rem;    
     opacity: 0;
     transition: 2000ms ease;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsl(0, 0%, 0%);
+
 }
 
 .project-item.show{

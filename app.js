@@ -1,3 +1,9 @@
+const getZoom = () => {
+    if (window.innerWidth < 600) return 0.5; // Example for small screens
+    if (window.innerWidth < 900) return 0.7; // Example for medium screens
+    return 0.8; // Default for large screens
+};
+
 VANTA.FOG({
     el: "body",
     mouseControls: true,
@@ -11,7 +17,7 @@ VANTA.FOG({
     baseColor: 0x0,
     blurFactor: 0.78,
     speed: 1.60,
-    zoom: 0.70
+    zoom: getZoom()
     })
 
 
