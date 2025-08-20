@@ -424,7 +424,6 @@ footer .social-links img {
     height: clamp(30px, 5vw, 40px);
     object-fit: contain;
     transition: transform 0.2s;
-    
 }
 
 footer .social-links a:hover img {
