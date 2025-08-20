@@ -1,3 +1,20 @@
+VANTA.FOG({
+    el: "body",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    highlightColor: 0x666666,
+    midtoneColor: 0x252d52,
+    lowlightColor: 0xbb,
+    baseColor: 0x0,
+    blurFactor: 0.78,
+    speed: 1.60,
+    zoom: 0.70
+    })
+
+
 const observer=new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if(entry.isIntersecting){
@@ -47,3 +64,4 @@ document.querySelectorAll('.slider').forEach(slider => {
         });
     });
 });
+
