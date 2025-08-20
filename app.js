@@ -1,7 +1,7 @@
 const getZoom = () => {
-    if (window.innerWidth < 600) return 0.5; // Example for small screens
-    if (window.innerWidth < 900) return 0.7; // Example for medium screens
-    return 0.8; // Default for large screens
+    if (window.innerWidth < 600) return 0.5;
+    if (window.innerWidth < 900) return 0.7; 
+    return 0.8;
 };
 
 VANTA.FOG({
