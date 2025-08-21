@@ -3,6 +3,11 @@ const getZoom = () => {
     if (window.innerWidth < 900) return 0.7; 
     return 0.8;
 };
+const getSpeed = () => {
+    if (window.innerWidth < 600) return 3.0;
+    if (window.innerWidth < 900) return 2.0;
+    return 2.0;
+};
 
 VANTA.FOG({
     el: "body",
@@ -16,7 +21,7 @@ VANTA.FOG({
     lowlightColor: 0xbb,
     baseColor: 0x0,
     blurFactor: 0.78,
-    speed: 1.60,
+    speed: getSpeed(),
     zoom: getZoom()
     })
 
