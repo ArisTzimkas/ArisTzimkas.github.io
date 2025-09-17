@@ -409,7 +409,14 @@ main{
     justify-content: center;
     color: white;
     font-family:consolas, monospace;
-
+    ul{
+        padding-left: 1.5rem;
+        list-style-type: disc;
+        li{
+            margin-bottom: 0.5rem;
+            font-size: clamp(1rem, 3vw, 1.2rem);
+        }
+    }
 }
 
 .row {
@@ -433,6 +440,7 @@ main{
 }
 .column h2{
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
     margin-bottom: 4rem;
