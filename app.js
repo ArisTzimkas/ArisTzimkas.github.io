@@ -58,21 +58,43 @@ function hideBar() {
 
 
 document.querySelectorAll('.slider').forEach(slider => {
-    const dots = slider.parentElement.querySelectorAll('.slider-nav button');
+    const buttons = slider.parentElement.querySelectorAll('.slider-nav button');
 
+    // Function to update active button for this specific slider
+    function updateActiveButton() {
+        const scrollLeft = slider.scrollLeft;
+        const slideWidth = slider.clientWidth;
+        const currentSlide = Math.round(scrollLeft / slideWidth);
+
+        // Remove active from all buttons in this slider
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        // Add active to current button
+        if (buttons[currentSlide]) {
+            buttons[currentSlide].classList.add('active');
+        }
+    }
+
+    // Wheel navigation
     slider.addEventListener('wheel', e => {
         e.preventDefault();
         const direction = e.deltaY > 0 ? 1 : -1;
         slider.scrollBy({ left: direction * slider.clientWidth, behavior: 'smooth' });
     });
 
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
+    // Listen for scroll events
+    slider.addEventListener('scroll', updateActiveButton);
+
+    // Button navigation
+    buttons.forEach((button, index) => {
+        button.addEventListener('click', () => {
             slider.scrollTo({
                 left: index * slider.clientWidth,
                 behavior: 'smooth'
             });
         });
     });
-});
 
+    // Initialize active button on load
+    updateActiveButton();
+});
