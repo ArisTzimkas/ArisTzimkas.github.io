@@ -263,8 +263,6 @@ main{
     max-width: 1200px;
     margin: 8rem auto;
     gap: 2rem;    
-    opacity: 0;
-    transition: 2000ms ease;
     box-shadow: 0 1.5rem 3rem -0.75rem hsl(0, 0%, 0%);
 
 }
